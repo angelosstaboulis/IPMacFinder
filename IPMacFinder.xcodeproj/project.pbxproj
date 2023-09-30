@@ -1,0 +1,654 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D67441C52AC7F7440090339C /* IPMacFinderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67441C42AC7F7440090339C /* IPMacFinderApp.swift */; };
+		D67441C72AC7F7440090339C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67441C62AC7F7440090339C /* ContentView.swift */; };
+		D67441C92AC7F7450090339C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D67441C82AC7F7450090339C /* Assets.xcassets */; };
+		D67441CC2AC7F7450090339C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D67441CB2AC7F7450090339C /* Preview Assets.xcassets */; };
+		D67441D72AC7F7450090339C /* IPMacFinderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67441D62AC7F7450090339C /* IPMacFinderTests.swift */; };
+		D67441E12AC7F7450090339C /* IPMacFinderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67441E02AC7F7450090339C /* IPMacFinderUITests.swift */; };
+		D67441E32AC7F7450090339C /* IPMacFinderUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67441E22AC7F7450090339C /* IPMacFinderUITestsLaunchTests.swift */; };
+		D67441F12AC7FC0A0090339C /* IPModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67441F02AC7FC0A0090339C /* IPModel.swift */; };
+		D67441F52AC7FEAE0090339C /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = D67441F42AC7FEAE0090339C /* Alamofire */; };
+		D67441F82AC7FF980090339C /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = D67441F72AC7FF980090339C /* SwiftyJSON */; };
+		D67441FB2AC8005B0090339C /* IPViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67441FA2AC8005B0090339C /* IPViewModel.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D67441D32AC7F7450090339C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D67441B92AC7F7440090339C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D67441C02AC7F7440090339C;
+			remoteInfo = IPMacFinder;
+		};
+		D67441DD2AC7F7450090339C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D67441B92AC7F7440090339C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D67441C02AC7F7440090339C;
+			remoteInfo = IPMacFinder;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D67441C12AC7F7440090339C /* IPMacFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IPMacFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D67441C42AC7F7440090339C /* IPMacFinderApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IPMacFinderApp.swift; sourceTree = "<group>"; };
+		D67441C62AC7F7440090339C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		D67441C82AC7F7450090339C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D67441CB2AC7F7450090339C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		D67441CD2AC7F7450090339C /* IPMacFinder.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = IPMacFinder.entitlements; sourceTree = "<group>"; };
+		D67441D22AC7F7450090339C /* IPMacFinderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IPMacFinderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D67441D62AC7F7450090339C /* IPMacFinderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IPMacFinderTests.swift; sourceTree = "<group>"; };
+		D67441DC2AC7F7450090339C /* IPMacFinderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IPMacFinderUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D67441E02AC7F7450090339C /* IPMacFinderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IPMacFinderUITests.swift; sourceTree = "<group>"; };
+		D67441E22AC7F7450090339C /* IPMacFinderUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IPMacFinderUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D67441F02AC7FC0A0090339C /* IPModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IPModel.swift; sourceTree = "<group>"; };
+		D67441FA2AC8005B0090339C /* IPViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IPViewModel.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D67441BE2AC7F7440090339C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D67441F82AC7FF980090339C /* SwiftyJSON in Frameworks */,
+				D67441F52AC7FEAE0090339C /* Alamofire in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D67441CF2AC7F7450090339C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D67441D92AC7F7450090339C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D67441B82AC7F7440090339C = {
+			isa = PBXGroup;
+			children = (
+				D67441C32AC7F7440090339C /* IPMacFinder */,
+				D67441D52AC7F7450090339C /* IPMacFinderTests */,
+				D67441DF2AC7F7450090339C /* IPMacFinderUITests */,
+				D67441C22AC7F7440090339C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D67441C22AC7F7440090339C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D67441C12AC7F7440090339C /* IPMacFinder.app */,
+				D67441D22AC7F7450090339C /* IPMacFinderTests.xctest */,
+				D67441DC2AC7F7450090339C /* IPMacFinderUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D67441C32AC7F7440090339C /* IPMacFinder */ = {
+			isa = PBXGroup;
+			children = (
+				D67441F92AC7FFA80090339C /* Interface */,
+				D67441F22AC7FE450090339C /* ViewModel */,
+				D67441EF2AC7FBE90090339C /* Model */,
+				D67441CD2AC7F7450090339C /* IPMacFinder.entitlements */,
+				D67441C42AC7F7440090339C /* IPMacFinderApp.swift */,
+				D67441CA2AC7F7450090339C /* Preview Content */,
+			);
+			path = IPMacFinder;
+			sourceTree = "<group>";
+		};
+		D67441CA2AC7F7450090339C /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				D67441CB2AC7F7450090339C /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		D67441D52AC7F7450090339C /* IPMacFinderTests */ = {
+			isa = PBXGroup;
+			children = (
+				D67441D62AC7F7450090339C /* IPMacFinderTests.swift */,
+			);
+			path = IPMacFinderTests;
+			sourceTree = "<group>";
+		};
+		D67441DF2AC7F7450090339C /* IPMacFinderUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D67441E02AC7F7450090339C /* IPMacFinderUITests.swift */,
+				D67441E22AC7F7450090339C /* IPMacFinderUITestsLaunchTests.swift */,
+			);
+			path = IPMacFinderUITests;
+			sourceTree = "<group>";
+		};
+		D67441EF2AC7FBE90090339C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D67441F02AC7FC0A0090339C /* IPModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D67441F22AC7FE450090339C /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				D67441FA2AC8005B0090339C /* IPViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		D67441F92AC7FFA80090339C /* Interface */ = {
+			isa = PBXGroup;
+			children = (
+				D67441C62AC7F7440090339C /* ContentView.swift */,
+				D67441C82AC7F7450090339C /* Assets.xcassets */,
+			);
+			path = Interface;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D67441C02AC7F7440090339C /* IPMacFinder */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D67441E62AC7F7450090339C /* Build configuration list for PBXNativeTarget "IPMacFinder" */;
+			buildPhases = (
+				D67441BD2AC7F7440090339C /* Sources */,
+				D67441BE2AC7F7440090339C /* Frameworks */,
+				D67441BF2AC7F7440090339C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = IPMacFinder;
+			packageProductDependencies = (
+				D67441F42AC7FEAE0090339C /* Alamofire */,
+				D67441F72AC7FF980090339C /* SwiftyJSON */,
+			);
+			productName = IPMacFinder;
+			productReference = D67441C12AC7F7440090339C /* IPMacFinder.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D67441D12AC7F7450090339C /* IPMacFinderTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D67441E92AC7F7450090339C /* Build configuration list for PBXNativeTarget "IPMacFinderTests" */;
+			buildPhases = (
+				D67441CE2AC7F7450090339C /* Sources */,
+				D67441CF2AC7F7450090339C /* Frameworks */,
+				D67441D02AC7F7450090339C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D67441D42AC7F7450090339C /* PBXTargetDependency */,
+			);
+			name = IPMacFinderTests;
+			productName = IPMacFinderTests;
+			productReference = D67441D22AC7F7450090339C /* IPMacFinderTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D67441DB2AC7F7450090339C /* IPMacFinderUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D67441EC2AC7F7450090339C /* Build configuration list for PBXNativeTarget "IPMacFinderUITests" */;
+			buildPhases = (
+				D67441D82AC7F7450090339C /* Sources */,
+				D67441D92AC7F7450090339C /* Frameworks */,
+				D67441DA2AC7F7450090339C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D67441DE2AC7F7450090339C /* PBXTargetDependency */,
+			);
+			name = IPMacFinderUITests;
+			productName = IPMacFinderUITests;
+			productReference = D67441DC2AC7F7450090339C /* IPMacFinderUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D67441B92AC7F7440090339C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					D67441C02AC7F7440090339C = {
+						CreatedOnToolsVersion = 15.0;
+					};
+					D67441D12AC7F7450090339C = {
+						CreatedOnToolsVersion = 15.0;
+						TestTargetID = D67441C02AC7F7440090339C;
+					};
+					D67441DB2AC7F7450090339C = {
+						CreatedOnToolsVersion = 15.0;
+						TestTargetID = D67441C02AC7F7440090339C;
+					};
+				};
+			};
+			buildConfigurationList = D67441BC2AC7F7440090339C /* Build configuration list for PBXProject "IPMacFinder" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D67441B82AC7F7440090339C;
+			packageReferences = (
+				D67441F32AC7FEAE0090339C /* XCRemoteSwiftPackageReference "Alamofire" */,
+				D67441F62AC7FF980090339C /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+			);
+			productRefGroup = D67441C22AC7F7440090339C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D67441C02AC7F7440090339C /* IPMacFinder */,
+				D67441D12AC7F7450090339C /* IPMacFinderTests */,
+				D67441DB2AC7F7450090339C /* IPMacFinderUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D67441BF2AC7F7440090339C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D67441CC2AC7F7450090339C /* Preview Assets.xcassets in Resources */,
+				D67441C92AC7F7450090339C /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D67441D02AC7F7450090339C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D67441DA2AC7F7450090339C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D67441BD2AC7F7440090339C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D67441C72AC7F7440090339C /* ContentView.swift in Sources */,
+				D67441FB2AC8005B0090339C /* IPViewModel.swift in Sources */,
+				D67441F12AC7FC0A0090339C /* IPModel.swift in Sources */,
+				D67441C52AC7F7440090339C /* IPMacFinderApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D67441CE2AC7F7450090339C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D67441D72AC7F7450090339C /* IPMacFinderTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D67441D82AC7F7450090339C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D67441E12AC7F7450090339C /* IPMacFinderUITests.swift in Sources */,
+				D67441E32AC7F7450090339C /* IPMacFinderUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D67441D42AC7F7450090339C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D67441C02AC7F7440090339C /* IPMacFinder */;
+			targetProxy = D67441D32AC7F7450090339C /* PBXContainerItemProxy */;
+		};
+		D67441DE2AC7F7450090339C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D67441C02AC7F7440090339C /* IPMacFinder */;
+			targetProxy = D67441DD2AC7F7450090339C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		D67441E42AC7F7450090339C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D67441E52AC7F7450090339C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		D67441E72AC7F7450090339C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = IPMacFinder/IPMacFinder.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"IPMacFinder/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.swift.IPMacFinder;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		D67441E82AC7F7450090339C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = IPMacFinder/IPMacFinder.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"IPMacFinder/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.swift.IPMacFinder;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		D67441EA2AC7F7450090339C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.swift.IPMacFinderTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/IPMacFinder.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/IPMacFinder";
+			};
+			name = Debug;
+		};
+		D67441EB2AC7F7450090339C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.swift.IPMacFinderTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/IPMacFinder.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/IPMacFinder";
+			};
+			name = Release;
+		};
+		D67441ED2AC7F7450090339C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.swift.IPMacFinderUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = IPMacFinder;
+			};
+			name = Debug;
+		};
+		D67441EE2AC7F7450090339C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.swift.IPMacFinderUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = IPMacFinder;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D67441BC2AC7F7440090339C /* Build configuration list for PBXProject "IPMacFinder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D67441E42AC7F7450090339C /* Debug */,
+				D67441E52AC7F7450090339C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D67441E62AC7F7450090339C /* Build configuration list for PBXNativeTarget "IPMacFinder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D67441E72AC7F7450090339C /* Debug */,
+				D67441E82AC7F7450090339C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D67441E92AC7F7450090339C /* Build configuration list for PBXNativeTarget "IPMacFinderTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D67441EA2AC7F7450090339C /* Debug */,
+				D67441EB2AC7F7450090339C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D67441EC2AC7F7450090339C /* Build configuration list for PBXNativeTarget "IPMacFinderUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D67441ED2AC7F7450090339C /* Debug */,
+				D67441EE2AC7F7450090339C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D67441F32AC7FEAE0090339C /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.8.0;
+			};
+		};
+		D67441F62AC7FF980090339C /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D67441F42AC7FEAE0090339C /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D67441F32AC7FEAE0090339C /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		D67441F72AC7FF980090339C /* SwiftyJSON */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D67441F62AC7FF980090339C /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			productName = SwiftyJSON;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = D67441B92AC7F7440090339C /* Project object */;
+}
