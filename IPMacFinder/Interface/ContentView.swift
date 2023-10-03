@@ -6,135 +6,130 @@
 //
 
 import SwiftUI
-
+import MapKit
 struct ContentView: View {
     @StateObject var viewModel = IPViewModel()
     @State var ipINFO:[IPModel] = []
+    @State private var coordinates = CLLocationCoordinate2D()
     var body: some View {
-        LazyVGrid(columns: /*@START_MENU_TOKEN@*/[GridItem(.fixed(20))]/*@END_MENU_TOKEN@*/, content: {
-            ForEach(ipINFO,id:\.self){ item in
+        ZStack{
+            ForEach(ipINFO,id:\.self) { info in
                 VStack{
-                    HStack{
-                        Text("IP:").font(.largeTitle)
-                        Text(String(describing:item.ip)).font(.largeTitle)
-                       
-                    }
-                   
-                           
-                }.frame(width:600,height:45,alignment: .leading)
-                VStack{
-                    HStack{
-                        Text("Network:").font(.largeTitle)
-                        Text(String(describing:item.network)).font(.largeTitle)
-                    }
-                }.frame(width:600,height:45,alignment: .leading)
+                    Map{
+                        Marker("IP-Place",coordinate: coordinates)
+                    }.onAppear(perform: {
+                        coordinates = CLLocationCoordinate2D(latitude: info.latitude, longitude: info.longitude)
+                    })
                     
+                }.position(x:0,y:600)
+                    .frame(width: (NSScreen.main?.frame.width)! - 600,height:(NSScreen.main?.frame.height)!-100,alignment: .leading)
                 VStack{
-                    HStack{
-                        Text("Version:").font(.largeTitle)
-                        Text(String(describing:item.version)).font(.largeTitle)
-                    }
-                }.frame(width:600,height:45,alignment: .leading)
-                VStack{
-                    HStack{
-                        Text("Currency:").font(.largeTitle)
-                        Text(String(describing:item.currency)).font(.largeTitle)
-                    }
-                }.frame(width:600,height:45,alignment: .leading)
-                VStack{
-                    HStack{
-                        Text("Currency-Name:").font(.largeTitle)
-                        Text(String(describing:item.currency_name)).font(.largeTitle)
-                    }
-                }.frame(width:600,height:45,alignment: .leading)
-                VStack{
-                    HStack{
-                        Text("Country:").font(.largeTitle)
-                        Text(String(describing:item.country)).font(.largeTitle)
-                    }
-                }.frame(width:600,height:45,alignment: .leading)
-                VStack{
-                    HStack{
-                        Text("Country-Code:").font(.largeTitle)
-                        Text(String(describing:item.country_code)).font(.largeTitle)
-                    }
-                }.frame(width:600,height:45,alignment: .leading)
-                VStack{
-                    HStack{
-                        Text("Country-Area:").font(.largeTitle)
-                        Text(String(describing:item.country_area)).font(.largeTitle)
-                    }
-                }.frame(width:600,height:45,alignment: .leading)
-                VStack{
-                    HStack{
-                        Text("Country-Capital:").font(.largeTitle)
-                        Text(String(describing:item.country_capital)).font(.largeTitle)
-                    }
-                }.frame(width:600,height:45,alignment: .leading)
-                VStack{
-                    HStack{
-                        Text("Country-Population:").font(.largeTitle)
-                        Text(String(describing:item.country_population)).font(.largeTitle)
-                    }
-                }.frame(width:600,height:45,alignment: .leading)
-                VStack{
-                    HStack{
-                        Text("Country-Calling-Code:").font(.largeTitle)
-                        Text(String(describing:item.country_calling_code)).font(.largeTitle)
-                    }
-                }.frame(width:600,height:45,alignment: .leading)
-                VStack{
-                    HStack{
-                        Text("Country-Code-ISO3:").font(.largeTitle)
-                        Text(String(describing:item.country_code_iso3)).font(.largeTitle)
-                    }
-                }.frame(width:600,height:45,alignment: .leading)
-                VStack{
-                    HStack{
-                        Text("Country-TLD:").font(.largeTitle)
-                        Text(String(describing:item.country_tld)).font(.largeTitle)
-                    }
-                }.frame(width:600,height:45,alignment: .leading)
-                VStack{
-                    HStack{
-                        Text("Latitude:").font(.largeTitle)
-                        Text(String(describing:item.latitude)).font(.largeTitle)
-                    }
-                }.frame(width:600,height:45,alignment: .leading)
-                VStack{
-                    HStack{
-                        Text("Longitude:").font(.largeTitle)
-                        Text(String(describing:item.longitude)).font(.largeTitle)
-                    }
-                }.frame(width:600,height:45,alignment: .leading)
-                VStack{
-                    HStack{
-                        Text("Region:").font(.largeTitle)
-                        Text(String(describing:item.region)).font(.largeTitle)
-                    }
-                }.frame(width:600,height:45,alignment: .leading)
-                VStack{
-                    HStack{
-                        Text("City:").font(.largeTitle)
-                        Text(String(describing:item.city)).font(.largeTitle)
-                    }
-                }.frame(width:600,height:45,alignment: .leading)
-                VStack{
-                    HStack{
-                        Text("ASN:").font(.largeTitle)
-                        Text(String(describing:item.asn)).font(.largeTitle)
-                    }
-                }.frame(width:600,height:45,alignment: .leading)
-                VStack{
-                    HStack{
-                        Text("Organization:").font(.largeTitle)
-                        Text(String(describing:item.org)).font(.largeTitle)
-                    }.frame(width:900,height:45,alignment: .leading)
-                }.frame(width:600,height:45,alignment: .leading)
+                    ZStack(alignment: .leading){
+                        HStack{
+                            Text("IP:").font(.largeTitle)
+                            Text(info.ip).font(.largeTitle)
+                        }
+                    }.frame(width:550,height:60,alignment: .leading)
+                    ZStack(alignment: .leading){
+                        HStack{
+                            Text("Network:").font(.largeTitle)
+                            Text(info.network).font(.largeTitle)
+                        }
+                    }.frame(width:550,height:60,alignment: .leading)
+                    ZStack(alignment: .leading){
+                        HStack{
+                            Text("Continent-Code:").font(.largeTitle)
+                            Text(info.continent_code).font(.largeTitle)
+                        }
+                    }.frame(width:550,height:60,alignment: .leading)
+                    ZStack(alignment: .leading){
+                        HStack{
+                            Text("Languages:").font(.largeTitle)
+                            Text(info.languages).font(.largeTitle)
+                        }
+                    }.frame(width:550,height:60,alignment: .leading)
+                    ZStack(alignment: .leading){
+                        HStack{
+                            Text("Country:").font(.largeTitle)
+                            Text(info.country).font(.largeTitle)
+                        }
+                    }.frame(width:550,height:60,alignment: .leading)
+                    ZStack(alignment: .leading){
+                        HStack{
+                            Text("Country-Population:").font(.largeTitle)
+                            Text(String(describing:info.country_population)).font(.largeTitle)
+                        }
+                    }.frame(width:550,height:60,alignment: .leading)
+                    ZStack(alignment: .leading){
+                        HStack{
+                            Text("Country-Capital:").font(.largeTitle)
+                            Text(info.country_capital).font(.largeTitle)
+                        }
+                    }.frame(width:550,height:60,alignment: .leading)
+                    ZStack(alignment: .leading){
+                        HStack{
+                            Text("Country-TLD:").font(.largeTitle)
+                            Text(info.country_tld).font(.largeTitle)
+                        }
+                    }.frame(width:550,height:60,alignment: .leading)
+                    ZStack(alignment: .leading){
+                        HStack{
+                            Text("Country-Calling-Code:").font(.largeTitle)
+                            Text(info.country_calling_code).font(.largeTitle)
+                        }
+                    }.frame(width:550,height:60,alignment: .leading)
+                    ZStack(alignment: .leading){
+                        HStack{
+                            Text("City:").font(.largeTitle)
+                            Text(info.city).font(.largeTitle)
+                        }
+                    }.frame(width:550,height:60,alignment: .leading)
+                    ZStack(alignment: .leading){
+                        HStack{
+                            Text("Timezone:").font(.largeTitle)
+                            Text(info.timezone).font(.largeTitle)
+                        }
+                    }.frame(width:550,height:60,alignment: .leading)
+                    ZStack(alignment: .leading){
+                        HStack{
+                            Text("Latitude:").font(.largeTitle)
+                            Text(String(describing:info.latitude)).font(.largeTitle)
+                        }
+                    }.frame(width:550,height:60,alignment: .leading)
+                    ZStack(alignment: .leading){
+                        HStack{
+                            Text("Longitude:").font(.largeTitle)
+                            Text(String(describing:info.longitude)).font(.largeTitle)
+                        }
+                    }.frame(width:550,height:60,alignment: .leading)
+                    ZStack(alignment: .leading){
+                        HStack{
+                            Text("Currency:").font(.largeTitle)
+                            Text(info.currency).font(.largeTitle)
+                        }
+                    }.frame(width:550,height:60,alignment: .leading)
+                    ZStack(alignment: .leading){
+                        HStack{
+                            Text("ASN:").font(.largeTitle)
+                            Text(info.asn).font(.largeTitle)
+                        }
+                    }.frame(width:550,height:60,alignment: .leading)
+                    ZStack(alignment: .leading){
+                        HStack{
+                                Text("Organization:").font(.largeTitle)
+                                Text(info.org).font(.largeTitle)
+                        }.frame(width:950,height:60,alignment: .leading)
+                    }.frame(width:550,height:60,alignment: .leading)
+                }.position(x:1200,y:570)
+                    .frame(width: (NSScreen.main?.frame.width)! - 400,height:(NSScreen.main?.frame.height)!-100,alignment: .leading)
+                
             }
-        }).onAppear(perform: {
-            Task{
+            
+            
+        }.onAppear(perform: {
+            Task.init{
                 self.ipINFO.append(contentsOf: await viewModel.getIPInfo())
+                
             }
         })
     }
