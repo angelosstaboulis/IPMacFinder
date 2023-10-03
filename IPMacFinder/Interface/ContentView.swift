@@ -28,7 +28,7 @@ struct ContentView: View {
                         HStack{
                             Text("IP:").font(.largeTitle)
                             Text(info.ip).font(.largeTitle)
-                        }
+                        }.frame(width:950,height:60,alignment: .leading)
                     }.frame(width:550,height:60,alignment: .leading)
                     ZStack(alignment: .leading){
                         HStack{
